@@ -2,7 +2,7 @@
 
 
 make:
-	line_count=$(wc -l guessinggame.sh)
-	echo "# Guessing game" > README.md 
-	echo $(shell date) >> README.md
-	echo $(line_count) >> README.md
+
+	echo "# Guessing game" > README.md
+	date +"Now time is %FT%T" >> README.md
+	wc -l < guessinggame.sh >> README.md
