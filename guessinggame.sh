@@ -1,21 +1,25 @@
-#!/usr/bin/bash
+#!/bin/bash
 # guessinggame.sh
 
 function compare()
 {
-        if [ $no_of_files -lt $user_input ]
+        if ! [[ $user_input =~ $re ]]
         then
-                echo Guess too high.
+                echo "Error: Not a number"
+        elif [ $no_of_files -lt $user_input ]
+        then
+                echo "Guess too high."
         elif [ $no_of_files -gt $user_input ]
         then
-                echo Guess too low.
+                echo "Guess too low."
         else
-                echo Correct guess. Congratulations.
+                echo "Correct guess. Congratulations."
                 exit
         fi
 }
 
-no_of_files=$(ls | wc -l)
+re='^[0-9]+$'
+no_of_files=$(ls -p | grep -v / | wc -l)
 
 while true
 do
