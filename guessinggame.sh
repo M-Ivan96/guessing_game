@@ -3,14 +3,13 @@
 
 function compare()
 {
-        if [[ ( $no_of_files < $user_input ) ]]
+        if [ $no_of_files -lt $user_input ]
         then
                 echo Guess too high.
-        elif [[ ( $no_of_files > $user_input ) ]]
+        elif [ $no_of_files -gt $user_input ]
         then
                 echo Guess too low.
-        elif [[ ( $no_of_files == $user_input ) ]]
-        then
+        else
                 echo Correct guess. Congratulations.
                 exit
         fi
