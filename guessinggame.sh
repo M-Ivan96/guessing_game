@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# guessinggame
+# guessinggame.sh
 
 function compare()
 {
@@ -15,7 +15,7 @@ function compare()
         fi
 }
 
-no_of_files=$(ls -al | wc -l)
+no_of_files=$(ls | wc -l)
 
 while true
 do
