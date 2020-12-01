@@ -1,4 +1,3 @@
 # Guessing game
-Tue Dec 1 14:36:56 CET 2020 \
+Tue Dec 1 15:35:27 CET 2020 \
 Number of lines: 24
-Number of files:
